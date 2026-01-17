@@ -44,12 +44,11 @@ public class ResetScoreLite(ISwiftlyCore core) : BasePlugin(core)
         ResetPlayerStats(controller, matchStats);
 
         controller.ActionTrackingServicesUpdated();
-        
+
         player.SendMessage(MessageType.Chat, $"{Core.Localizer["prefix"]}{Core.Localizer["success"]}");
 
-        Core.PlayerManager.SendMessage(MessageType.Chat, $"{Core.Localizer["prefix"]}{Core.Localizer["reset", player.Controller.PlayerName]}");
-        
-        var localizer = Core.Translation.GetPlayerLocalizer(player);
+        Core.PlayerManager.SendMessage(MessageType.Chat,
+            $"{Core.Localizer["prefix"]}{Core.Localizer["reset", player.Controller.PlayerName]}");
     }
 
     private static bool IsScoreAlreadyReset(CCSPlayerController controller, CSMatchStats_t? stats)
