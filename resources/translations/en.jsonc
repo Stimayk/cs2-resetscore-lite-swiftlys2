@@ -1,0 +1,6 @@
+{
+  "prefix": "[[red]RS[default]] ",
+  "success": "[purple]Вы успешно сбросили свой счёт",
+  "reset": "[purple]{0} сбросил свой счёт",
+  "already": "[red]Ваш счет уже сброшен"
+}
